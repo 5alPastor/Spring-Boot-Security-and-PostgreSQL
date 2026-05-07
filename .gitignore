@@ -37,5 +37,11 @@ build/
 ### VS Code ###
 .vscode/
 
-### Seguridad y Configuración ###
+### Seguridad y config ###
+credentialsandstuff.env
 .env
+.env.local
+# Docker data
+jwt_db_data/
+postgres_data/
+.docker/

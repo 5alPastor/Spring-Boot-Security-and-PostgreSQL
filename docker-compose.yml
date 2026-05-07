@@ -1,0 +1,21 @@
+##dockers stuff ##
+services:
+  db:
+    image: postgres:15
+    env_file:
+      - credentialsandstuff.env
+    container_name: jwt_postgres_db
+    #el resto se queda en el archivo .env
+    ports:
+      - "5332:5432"
+    networks:
+      - backend-network
+    volumes:
+      - jwt_db_data:/var/lib/postgresql/data
+
+volumes:
+  jwt_db_data:
+
+networks:
+  backend-network:
+    driver: bridge
